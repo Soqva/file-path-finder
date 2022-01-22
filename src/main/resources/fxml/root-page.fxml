@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.s0qva.controller.PathfindingController">
+   <children>
+      <Button fx:id="executeButton" layoutX="411.0" layoutY="545.0" mnemonicParsing="false" onAction="#findAbsolutePaths" prefHeight="41.0" prefWidth="138.0" text="Search" />
+      <TextField fx:id="fileNameInputTextField" alignment="CENTER" layoutX="245.0" layoutY="430.0" prefHeight="41.0" prefWidth="312.0" promptText="Input: myFile.docx">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <ScrollPane fx:id="foundPathsScrollPane" fitToHeight="true" fitToWidth="true" layoutX="96.0" layoutY="45.0" prefHeight="360.0" prefWidth="610.0" />
+      <Button fx:id="clearButton" layoutX="252.0" layoutY="545.0" mnemonicParsing="false" onAction="#clear" prefHeight="41.0" prefWidth="138.0" text="Clear" />
+      <TextField fx:id="directoryInputTextField" alignment="CENTER" layoutX="245.0" layoutY="482.0" prefHeight="41.0" prefWidth="312.0" promptText="Input: C:/">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+   </children>
+</AnchorPane>
