@@ -1,6 +1,8 @@
 package com.s0qva.service;
 
 import com.s0qva.util.message.FailedMessage;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.File;
 import java.io.IOException;
@@ -13,6 +15,7 @@ import java.util.List;
 import java.util.Objects;
 
 public class FileVisitorImpl extends SimpleFileVisitor<Path> {
+    private static final Logger LOGGER = LoggerFactory.getLogger(FileVisitorImpl.class);
     private final List<String> foundPaths = new ArrayList<>();
     private final String fileName;
 
@@ -27,19 +30,21 @@ public class FileVisitorImpl extends SimpleFileVisitor<Path> {
 
     @Override
     public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) {
+        LOGGER.info("Method visitFile({}) is being processed", file);
         File fileObject = file.toFile();
 
         if (fileObject.isFile() && fileObject.getName().contains(fileName)) {
             foundPaths.add(fileObject.getAbsolutePath());
+            LOGGER.info("Absolute path of file {} has been added", fileObject);
         }
 
+        LOGGER.info("Method visitFile({}) has been finished, the search continues", file);
         return FileVisitResult.CONTINUE;
     }
 
     @Override
     public FileVisitResult visitFileFailed(Path file, IOException exc) {
-        System.err.println(file.toFile().getAbsolutePath() + " " + FailedMessage.FILE_NOT_AVAILABLE.getMessage());
-
+        LOGGER.error(file.toFile().getAbsolutePath() + " " + FailedMessage.FILE_NOT_AVAILABLE.getMessage());
         return FileVisitResult.CONTINUE;
     }
 
