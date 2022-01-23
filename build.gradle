@@ -14,9 +14,8 @@ java {
 javafx {
     version = "17"
     modules = [ 'javafx.controls', 'javafx.fxml' ]
+    mainClassName = 'src/main/java/com/s0qva/ApplicationLauncher.java'
 }
-
-mainClassName = 'src/main/java/com/s0qva/ApplicationLauncher.java'
 
 repositories {
     mavenCentral()

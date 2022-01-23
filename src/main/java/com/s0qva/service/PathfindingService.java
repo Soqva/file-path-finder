@@ -4,7 +4,6 @@ import com.s0qva.dto.FoundPathsDto;
 import com.s0qva.util.PropertiesUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -28,7 +27,7 @@ public final class PathfindingService {
     public FoundPathsDto getAbsolutePathToFile(String fileName, Path... paths) {
         LOGGER.info("File name received: {}, getAbsolutePathToFile with {} paths is called", fileName, paths);
         FileVisitorImpl fileVisitor = new FileVisitorImpl(fileName);
-        LOGGER.info("Object {} has been created", fileVisitor);
+        LOGGER.info("FileVisitorImpl {} has been created", fileVisitor);
         try {
             for (Path path : paths) {
                 LOGGER.info("Path {} is being processed", path);

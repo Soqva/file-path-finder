@@ -25,7 +25,7 @@ public class ApplicationLauncher extends Application {
         Scene scene = new Scene(root);
         LOGGER.info("Scene {} has been created", scene);
 
-        LOGGER.info("Some options for the stage");
+        LOGGER.info("Some options are being processed for the stage");
         stage.setTitle("File path finder");
         stage.setResizable(false);
         LOGGER.info("Scene {} is being set to the stage {}", scene, stage);

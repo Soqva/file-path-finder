@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Objects;
 
 public class FoundPathsDto {
-    private List<String> foundPaths;
+    private final List<String> foundPaths;
 
     public FoundPathsDto(List<String> foundPaths) {
         this.foundPaths = foundPaths;
@@ -12,10 +12,6 @@ public class FoundPathsDto {
 
     public List<String> getFoundPaths() {
         return foundPaths;
-    }
-
-    public void setFoundPaths(List<String> foundPaths) {
-        this.foundPaths = foundPaths;
     }
 
     @Override

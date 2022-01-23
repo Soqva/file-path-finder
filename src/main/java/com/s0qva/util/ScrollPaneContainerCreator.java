@@ -2,7 +2,6 @@ package com.s0qva.util;
 
 import com.s0qva.util.message.FailedMessage;
 import com.s0qva.util.message.MessageStatus;
-
 import javafx.collections.ObservableList;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -12,7 +11,6 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.VBox;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import java.util.List;
 
 public final class ScrollPaneContainerCreator {
